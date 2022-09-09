@@ -1,0 +1,20 @@
+Begin
+	Input Score
+	If Score>= 75
+		Display Loai A
+	Else 
+		If 60<=Score<75 then 
+			Display Loai B
+		Else 
+			If 45<=Score<=0 then 
+				Display Loai C
+			Else
+				If 35<=Score<45 then 
+					Display Loai D
+				Else 
+					Display Loai C
+		End if 
+		End if
+		End if
+		End if
+End

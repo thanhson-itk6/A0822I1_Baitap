@@ -1,0 +1,13 @@
+Begin
+	Input n
+	While (i<=n) do 
+		Input a1,a2,a3...an
+	end do 
+	max=a1
+	While (i<=n) do 
+		if ai>max then 
+		max=ai
+		end if 
+	end do 
+	Display Numbermax is max
+End

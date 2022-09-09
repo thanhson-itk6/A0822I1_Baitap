@@ -1,0 +1,13 @@
+Begin
+	Input a,b,c
+	Suppose max=a;
+	If b>max then 
+		display max la b
+ 	else
+		if c>max then 
+			dislay max la c
+		else
+			display max la a
+	end if	
+	end if
+End
