@@ -9,9 +9,27 @@
             color: white;
            text-align:center;
         }
+        
         input[ name=email] {
              width: 80%;
         
+            }
+        .tieude
+        {
+            background-color: grey;
+            color: blue;
+        }
+        input[ name=diachi ] {
+             height: 80px;
+            width: 90%  ;
+            }
+            input[ name=sdt ] {
+                
+            width: 80%  ;
+            }
+            input[ name=ngaysinh ] {
+            
+            width: 70%  ;
             }
     </style>
 </head>
@@ -53,6 +71,51 @@
           <td><button type="reset">Nhập lại</button></td>
       </tr>
   </table>
+</form>
+</body>
+<body>
+    
+    <h1 class="tieude" > Đăng kí học viên</h1>
+    <form action="#" method="get">
+    <table>
+
+    <tr>
+        <td style="color: blue">Họ và Tên</td>
+        <td><input type="text" name="yourname"></td>
+    </tr>
+    <tr>
+        <td style="color: blue  ">Ngày sinh</td>
+        <td><input type="text" name="ngaysinh"></td>
+    </tr>
+    <tr>
+        <td style="color: blue">Giới tính</td>
+        <td> <input type="radio" name="gioitinh" value="true"> Nam
+        <input type="radio" name="gioitinh" value="false"> Nữ</td> 
+    </tr>
+
+    <tr>
+        <td style="color: blue  ">Địa chỉ</td>
+        <td><input type="text" name="diachi"></td>
+    </tr>
+    <tr>   <td style="color: blue  "> Lớp </td>
+      <td>  <select name="Lớp">
+            <option value=""> Chọn lớp</option>
+        </select> </td>
+    </tr>
+    <tr>
+        <td style="color: blue  ">Email</td>
+        <td><input type="text" name="email"></td>
+    </tr>
+    <tr>
+        <td style="color: blue  ">Số điện thoại</td>
+        <td><input type="text" name="sdt"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit">Đăng kí</button>
+        <button type="reset">Nhập lại</button></td>
+    </tr>
+</table>
 </form>
 </body>
 </html>
