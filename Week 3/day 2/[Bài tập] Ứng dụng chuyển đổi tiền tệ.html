@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+    <table border="0px">
+        <tr>
+            <th> Amount</th>
+            <th> From currency</th>
+            <th> To Currency</th>
+        </tr>
+        <tr>
+            <td> <input type="text" id="Amount"> </td>
+            <td>
+                <select id="From Currency"> <option value="VietNam">VietNam</option>
+                                   <option value="USD"> USD </option>
+            </select>
+            </td>
+            <td>
+                <select id="To Currency "> <option value="VietNam"> VietNam </option>
+                                  <option value="USD"> USD </option>
+            </select>
+            </td>
+            <td> <button onclick="Convert()" ; style="color: white; background-color: purple"> Convert </button> </td>
+        </tr>
+    </table>
+    <p id="Money2" style="color: blue"> </p>
+    <script>
+        function Convert() {
+            let Money1 = document.getElementById('Amount').value;
+            let choose1 = document.getElementById('From Currency').value;
+            let choose2 = document.getElementById('To Currency ').value;
+
+            if (choose1 == choose2) {
+                document.getElementById("Money2").innerText = "Result: " + Money1;
+            }
+            if (choose1 == "VietNam" && choose2 == "USD") {
+                document.getElementById("Money2").innerText = "Result: " + Money1 / 23.660, 00;
+            }
+            if (choose1 == "USD" && choose2 == "VietNam") {
+                document.getElementById("Money2").innerText = "Result: " + Money1 * 23.660, 00;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
