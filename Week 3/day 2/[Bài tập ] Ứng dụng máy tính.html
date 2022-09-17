@@ -7,50 +7,55 @@
 </head>
 
 <body>
-    <input type="text" id="dauvao1">
-    <input type="text" id="dauvao2"><br>
-    <p>
-        <button type="button" onclick="A()">Addition(+)</button>
-        <button type="button" onclick="B()">Subtraction(-)</button>
-        <button type="button" onclick="C()">Multiplication(X)</button>
-        <button type="button" onclick="D()">Division(/)</button>
-    </p>
+    <form>
+        <h1>
+            Caculator
+        </h1>
+        <input type="text" id="Input1">
+        <input type="text" id="Input2"><br>
+        <p>
+            <button type="button" onclick="Addition()">Addition(+)</button>
+            <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+            <button type="button" onclick="Multiplication()">Multiplication(X)</button>
+            <button type="button" onclick="Division()">Division(/)</button>
+        </p>
+    </form>
     <p id="result" style="color: blue"></p>
     <script>
-        function A() {
-            let sothunhat = document.getElementById('dauvao1').value;
-            let sothuhai = document.getElementById('dauvao2').value;
-            sothunhat = parseFloat(sothunhat);
-            sothuhai = parseFloat(sothuhai);
-            Addition = (sothunhat + sothuhai);
-            document.getElementById("result").innerHTML = "Result Adition:" + Addition
+        function Addition() {
+            let number1 = document.getElementById('Input1').value;
+            let number2 = document.getElementById('Input2').value;
+            number1 = parseFloat(number1);
+            number2 = parseFloat(number2);
+            Addition1 = (number1 + number2);
+            document.getElementById("result").innerHTML = "Result Adition:" + Addition1;
         }
 
-        function B() {
-            let sothunhat = document.getElementById('dauvao1').value;
-            let sothuhai = document.getElementById('dauvao2').value;
-            sothunhat = parseFloat(sothunhat);
-            sothuhai = parseFloat(sothuhai);
-            Subtraction = (sothunhat - sothuhai);
-            document.getElementById("result").innerHTML = "Result Subtraction:" + Subtraction
+        function Subtraction() {
+            let number1 = document.getElementById('Input1').value;
+            let number2 = document.getElementById('Input2').value;
+            number1 = parseFloat(number1);
+            number2 = parseFloat(number2);
+            Subtraction1 = (number1 - number2);
+            document.getElementById("result").innerHTML = "Result Subtraction:" + Subtraction1
         }
 
-        function C() {
-            let sothunhat = document.getElementById('dauvao1').value;
-            let sothuhai = document.getElementById('dauvao2').value;
-            sothunhat = parseFloat(sothunhat);
-            sothuhai = parseFloat(sothuhai);
-            Multiplication = (sothunhat * sothuhai);
-            document.getElementById("result").innerHTML = "Result Multiplication:" + Multiplication
+        function Multiplication() {
+            let number1 = document.getElementById('Input1').value;
+            let number2 = document.getElementById('Input2').value;
+            number1 = parseFloat(number1);
+            number2 = parseFloat(number2);
+            Multiplication1 = (number1 * number2);
+            document.getElementById("result").innerHTML = "Result Multiplication:" + Multiplication1
         }
 
-        function D() {
-            let sothunhat = document.getElementById('dauvao1').value;
-            let sothuhai = document.getElementById('dauvao2').value;
-            sothunhat = parseFloat(sothunhat);
-            sothuhai = parseFloat(sothuhai)
-            Division = (sothunhat / sothuhai);
-            document.getElementById("result").innerHTML = "Result Division:" + Division
+        function Division() {
+            let number1 = document.getElementById('Input1').value;
+            let number2 = document.getElementById('Input2').value;
+            number1 = parseFloat(number1);
+            number2 = parseFloat(number2)
+            Division1 = (number1 / number2);
+            document.getElementById("result").innerHTML = "Result Division:" + Division1
         }
     </script>
 </body>
