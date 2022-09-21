@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="window"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="input(this.value)" value="1"></td>
+            <td><input type="button" onclick="input(this.value)" value="2"></td>
+            <td><input type="button" onclick="input(this.value)" value="3"></td>
+            <td><input type="button" onclick="input(this.value)" value="+"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" onclick="input(this.value)" value="4"></td>
+            <td><input type="button" onclick="input(this.value)" value="5"></td>
+            <td><input type="button" onclick="input(this.value)" value="6"></td>
+            <td><input type="button" onclick="input(this.value)" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="input(this.value)" value="7"></td>
+            <td><input type="button" onclick="input(this.value)" value="8"></td>
+            <td><input type="button" onclick="input(this.value)" value="9"></td>
+            <td><input type="button" onclick="input(this.value)" value="x"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="clear()" value="C"></td>
+            <td><input type="button" onclick="input(this.value)" value="0"></td>
+            <td><input type="button" onclick="result()" value="="></td>
+            <td><input type="button" onclick="input(this.value)" value="/"></td>
+        </tr>
+
+    </table>
+
+
+    <script>
+        function input(number) {
+            document.getElementById("window").value += number;
+        }
+
+        function result() {
+            let string = document.getElementById("window").value;
+            document.getElementById("window").value = eval(string);
+
+        }
+
+        function clear() {
+            document.getElementById("window").value = "";
+        }
+    </script>
+</body>
+
+</html>
