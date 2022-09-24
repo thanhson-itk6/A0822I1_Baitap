@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let minute = +prompt("The minutes called:")
+        const fee_charge = 10;
+        let fee
+        if (minute > 200) {
+            fee = (minute - 200) * 200 + 150 * 400 + 50 * 600;
+            cost = 0.01 * fee + fee_charge;
+            document.write("The fee must pay :" + cost)
+        } else if (minute > 50) {
+            fee = (minute - 50) * 400 + 50 * 600;
+            tong = 0.01 * fee + fee_charge;
+            document.write("The fee must pay:" + cost)
+        } else {
+            fee = minute * 600;
+            cost = 0.01 * fee + fee_charge;
+            document.write("The fee must pay:" + cost)
+        }
+    </script>
+</body>
+
+</html>
