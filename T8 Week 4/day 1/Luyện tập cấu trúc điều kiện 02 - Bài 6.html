@@ -3,31 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Giải phương trình bậc 1</title>
+    <title></title>
 </head>
 
 <body>
-    <input type="text" id="num_a">
-    <input type="text" id="num_b">
-    <input type="button" onclick="nghiemPT()" value="Giai PT">
-    <p id="nghiem"></p>
+    <input type="text" id="num1" placeholder="Enter a">
+    <input type="text" id="num2" placeholder="Enter b">
+    <input type="button" onclick="solve_Math()" value="Solve Math">
+    <p id="value"></p>
     <script>
-        function nghiemPT() {
-            let a = parseFloat(document.getElementById('num_a').value);
-            let b = parseFloat(document.getElementById('num_b').value);
+        function solve_Math() {
+            let a = parseFloat(document.getElementById('num1').value);
+            let b = parseFloat(document.getElementById('num2').value);
             let x;
             if (a == 0) {
                 if (b == 0) {
-                    document.getElementById('nghiem').innerText = 'Pt có vô số nghiệm';
+                    document.getElementById('value').innerText = 'The equation has infinitely many solutions';
                 } else {
-                    document.getElementById('nghiem').innerText = 'Pt vô nghiệm';
+                    document.getElementById('value').innerText = 'The equation has no solution';
                 }
             } else {
                 if (b == 0) {
-                    document.getElementById('nghiem').innerText = 'PT có 1 nghiệm x = 0';
+                    document.getElementById('value').innerText = 'The equation has 1 solution x = 0';
                 } else {
                     x = (-b) / a;
-                    document.getElementById('nghiem').innerHTML = 'PT có nghiệm x = ' + x;
+                    document.getElementById('value').innerHTML = 'The equation has x solution = ' + x;
                 }
             }
         }
