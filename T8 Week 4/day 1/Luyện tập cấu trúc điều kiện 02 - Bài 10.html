@@ -3,45 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tính giá điện</title>
+    <title></title>
 </head>
 
 <body>
-    <input type="text" id="sodien" placeholder="Nhập vào số điện">
-    <input type="button" onclick="thanhTien()" value="Thành tiền"><br><br>
-    <input type="text" id="ketQua" placeholder="Số tiền">
+    <input type="text" id="electric_Number" placeholder="Enter electric number ">
+    <input type="button" onclick="electric_Money()" value="Check"><br><br>
+    <input type="text" id="result" placeholder="Electric money">
     <script>
-        function thanhTien() {
-            const BAC1 = 1678;
-            const BAC2 = 1734;
-            const BAC3 = 2014;
-            const BAC4 = 2536;
-            const BAC5 = 2834;
-            const BAC6 = 2927;
-            let sodien = parseInt(document.getElementById('sodien').value);
-            let thanhtien;
-            if (sodien > 400) {
-                thanhtien = sodien * BAC6;
-                document.getElementById('ketQua').value = thanhtien + ' VND';
+        function electric_Money() {
+            const LEVEL_1 = 1678;
+            const LEVEL_2 = 1734;
+            const LEVEL_3 = 2014;
+            const LEVEL_4 = 2536;
+            const LEVEL_5 = 2834;
+            const LEVEL_6 = 2927;
+            let electric_Number = parseInt(document.getElementById('electric_Number').value);
+            let electric_Money;
+            if (electric_Number < 0) {
+                document.getElementById('result').innerText = 'Vui long nhap lai So Dien\ nSo dien khong duoc nho hon 0 ';
+            } else if (electric_Number <= 50) {
+                electric_Money = electric_Number * LEVEL_1;
+                document.getElementById('result').value = electric_Money + ' VND';
             } else {
-                if (sodien > 300) {
-                    thanhtien = sodien * BAC5;
-                    document.getElementById('ketQua').value = thanhtien + ' VND';
+                if (electric_Number <= 100) {
+                    electric_Money = 50 * LEVEL_1 + ((electric_Number - 50) * LEVEL_2);
+                    document.getElementById('result').value = electric_Money + ' VND';
                 } else {
-                    if (sodien > 200) {
-                        thanhtien = sodien * BAC4;
-                        document.getElementById('ketQua').value = thanhtien + ' VND';
+                    if (electric_Number <= 200) {
+                        electric_Money = 50 * LEVEL_1 + (50 * LEVEL_2) + ((electric_Number - 100) * LEVEL_3);
+                        document.getElementById('result').value = electric_Money + ' VND';
                     } else {
-                        if (sodien > 100) {
-                            thanhtien = sodien * BAC3;
-                            document.getElementById('ketQua').value = thanhtien + ' VND';
+                        if (electric_Number <= 300) {
+                            electric_Money = 50 * LEVEL_1 + (50 * LEVEL_2) + (100 * LEVEL_3) + ((electric_Number - 200) * LEVEL_4);
+                            document.getElementById('result').value = electric_Money + ' VND';
                         } else {
-                            if (sodien > 50) {
-                                thanhtien = sodien * BAC2;
-                                document.getElementById('ketQua').value = thanhtien + ' VND';
-                            } else {
-                                thanhtien = sodien * BAC1;
-                                document.getElementById('ketQua').value = thanhtien + ' VND';
+                            if (electric_Number <= 400) {
+                                electric_Money = 50 * LEVEL_1 + (50 * LEVEL_2) + (100 * LEVEL_3) + (100 * LEVEL_4) + ((electric_Number - 300) * LEVEL_5);
+                                document.getElementById('result').value = electric_Money + ' VND';
+                            } else if (electric_Number > 400) {
+                                electric_Money = 50 * LEVEL_1 + (50 * LEVEL_2) + (100 * LEVEL_3) + (100 * LEVEL_4) + (100 * LEVEL_5) + ((electric_Number - 400) * LEVEL_6);
+                                document.getElementById('result').value = electric_Money + ' VND';
                             }
                         }
                     }

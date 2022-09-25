@@ -3,54 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tính thuế thu nhập cá nhân</title>
+    <title></title>
 </head>
 
 <body>
-    <input type="text" id="luong" placeholder="Lương">
-    <input type="button" onclick="tinhThue()" value="Tính thuế"><br><br>
-    <input type="text" id="thue" placeholder="Thuế phải nộp">
+    <input type="text" id="salary_Money" placeholder="Salary money">
+    <input type="button" onclick="tax()" value="Check"><br><br>
+    <input type="text" id="tax" placeholder="Tax payable">
     <script>
-        function tinhThue() {
-            const BAC1 = 0.05;
-            const BAC2 = 0.1;
-            const BAC3 = 0.15;
-            const BAC4 = 0.2;
-            const BAC5 = 0.25;
-            const BAC6 = 0.3;
-            const BAC7 = 0.35;
-            let luong = parseInt(document.getElementById('luong').value);
-            let tienThue;
-            if (luong > 80) {
-                tienThue = luong * BAC7;
-                document.getElementById('thue').value = tienThue + ' VND';
+        function tax() {
+            const LEVEL_1 = 0.1;
+            const LEVEL_2 = 0.2;
+            const LEVEL_3 = 0.3;
+            let salary_Money = parseInt(document.getElementById('salary_Money').value);
+            let tax_Money;
+            if (salary_Money > 15000000) {
+                tax_Money = salary_Money * LEVEL_3;
+                document.getElementById('tax').value = tax_Money + ' VND';
             } else {
-                if (luong > 52) {
-                    tienThue = luong * BAC6;
-                    document.getElementById('thue').value = tienThue + ' VND';
+                if (salary_Money >= 7000000) {
+                    tax_Money = salary_Money * LEVEL_2;
+                    document.getElementById('tax').value = tax_Money + ' VND';
                 } else {
-                    if (luong > 32) {
-                        tienThue = luong * BAC5;
-                        document.getElementById('thue').value = tienThue + ' VND';
-                    } else {
-                        if (luong > 18) {
-                            tienThue = luong * BAC4;
-                            document.getElementById('thue').value = tienThue + ' VND';
-                        } else {
-                            if (luong > 10) {
-                                tienThue = luong * BAC3;
-                                document.getElementById('thue').value = tienThue + ' VND';
-                            } else {
-                                if (luong > 5) {
-                                    tienThue = luong * BAC2;
-                                    document.getElementById('thue').value = tienThue + ' VND';
-                                } else {
-                                    tienThue = luong * BAC1;
-                                    document.getElementById('thue').value = tienThue + ' VND';
-                                }
-                            }
-                        }
-                    }
+                    tax_Money = salary_Money * LEVEL_1;
+                    document.getElementById('tax').value = tax_Money + ' VND';
+
                 }
             }
         }
