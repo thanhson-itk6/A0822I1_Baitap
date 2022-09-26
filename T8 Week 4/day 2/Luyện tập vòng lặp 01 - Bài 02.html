@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let temperature = +(prompt("Enter the temperature: "))
+        while (temperature < 20 || temperature > 100) {
+            if (temperature < 20) {
+                alert("The temperature is too cold")
+                temperature = +(prompt("Please re-enter the temperature"))
+            } else if (temperature > 100) {
+                alert("The temperature is too hot")
+                temperature = +(prompt("Please re-enter the temperature"))
+            }
+        }
+        alert("Normal temperature")
+    </script>
+</body>
+
+</html>
