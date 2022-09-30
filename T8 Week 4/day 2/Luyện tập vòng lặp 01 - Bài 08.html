@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="Game()">Chơi</button>
+    <script>
+        function Game() {
+
+            let phamvi = +prompt("Trò chơi đoán số từ 0 đến phạm vi bạn muốn là");
+            let nhapso = +prompt("Nhập vào số muốn đoán");
+            let soRamdom;
+            let count = 1;
+            soRamdom = Math.floor(Math.random() * phamvi);
+            if (soRamdom == nhapso) {
+                alert("Chúc mừng bạn đã đoán đúng")
+            } else {
+                while (soRamdom != nhapso && count < 3) {
+                    alert("Bạn đoán sai số đúng là " + soRamdom);
+                    soRamdom = Math.floor(Math.random() * phamvi);
+                    nhapso = +prompt("Nhập vào số muốn đoán");
+                    count++;
+                }
+                if (soRamdom == nhapso)
+                    alert("Chúc mừng bạn đã đoán đúng")
+                else {
+                    alert("Bạn đoán sai số đúng là " + soRamdom);
+
+                }
+                if (soRamdom != nhapso)
+                    alert("Chúc bạn may mắn lần sau");
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
