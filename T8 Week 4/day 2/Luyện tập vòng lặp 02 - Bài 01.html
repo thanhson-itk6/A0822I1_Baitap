@@ -10,33 +10,38 @@
 
 <body>
     <script>
+        let soluong = +prompt("Nhập số lượng số fibonacci cần muốn in ra");
+        let count = 1;
+        let i = 1;
         let f = 0,
             f0 = 0,
             f1 = 0
         let fibonacci = "";
+        while (count <= soluong) {
 
-        for (let i = 1; i <= 20; i++) {
+
             if (i == 1) {
                 f = 0
                 f1 = 1
                 fibonacci += f + " "
-
+                count++;
             } else if (i == 2) {
                 f = f0 + f1
                 f1 = 1
                 fibonacci += f + " "
-
+                count++;
             } else {
                 f = f0 + f1
                 f0 = f1
                 f1 = f
                 fibonacci += f + " "
-
+                count++;
             }
-            document.write(i + "=" + f + "<br>")
-
+            document.write(i + "=" + f + "<br>");
+            i++;
         }
-        document.write("Fibonacci series: " + fibonacci + "<br>")
+
+        document.write("Fibonacci series: " + fibonacci + "<br>");
     </script>
 </body>
 
