@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = prompt("Nhập vào một chuỗi");
+        let arrayFix = [];
+
+        document.write("Mảng gồm [" + array + "]<br>");
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == "-") {
+                array[i] = "_";
+                arrayFix.push("_");
+            } else {
+                arrayFix.push(array[i]);
+            }
+
+        }
+
+        document.write("Mảng sửa gồm [" + arrayFix.join("") + "]<br>");
+    </script>
+</body>
+
+</html>
