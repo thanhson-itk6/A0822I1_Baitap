@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = [],
+            test = true,
+            vitri = [],
+            dem = 0;
+        let numberNew = [];
+        let V = +prompt("Nhập số nguyên V");
+        for (let i = 0; i < 10; i++) {
+            number[i] = prompt("Nhập số vào mảng");
+            if (number[i] == V) {
+                test = false;
+            }
+
+            if (number[i] != V) {
+                numberNew.push(number[i]);
+            }
+        }
+        document.write("Dãy số = [" + number + "]<br>");
+        if (test == false) {
+            document.write("Đã xóa phần tử " + V + " dãy số mới = [" + numberNew + "] <br>");
+        }
+    </script>
+</body>
+
+</html>
