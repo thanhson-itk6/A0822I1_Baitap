@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = [],
+            numberNegative = [];
+
+        for (let i = 0; i < 10; i++) {
+            number[i] = +prompt("Nhập số vào mảng");
+            if (number[i] < 0) {
+                numberNegative.push(number[i]);
+            }
+        }
+        document.write("Dãy số là: = [" + number + "]<br>");
+        document.write("Các số âm gồm " + numberNegative.length + " phần tử gồm những số = [" + numberNegative + "]<br>");
+    </script>
+</body>
+
+</html>
