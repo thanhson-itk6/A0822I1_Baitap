@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let
+            numberA = [],
+            numberB = [],
+            numberC = [];
+        for (let i = 0; i < 10; i++) {
+            numberA[i] = +prompt("Nhập số vào mảng A ");
+        }
+        for (let i = 0; i < 10; i++) {
+            numberB[i] = +prompt("Nhập số vào mảng B ");
+        }
+        document.write("Dãy số A vừa nhập là : [" + numberA + "]<br>");
+        document.write("Dãy số B vừa nhập là : [" + numberB + "]<br>");
+        numberC = numberA;
+        for (let i = 0; i < numberB.length; i++) {
+            numberC.push(numberB[i]);
+        }
+        document.write("Nối mảng A và mảng B tạo ra Mảng C : [" + numberC + "]<br>");
+    </script>
+</body>
+
+</html>
