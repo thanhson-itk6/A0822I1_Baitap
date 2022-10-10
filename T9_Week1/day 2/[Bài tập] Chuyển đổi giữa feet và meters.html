@@ -19,25 +19,25 @@
 
     <script>
         function convert() {
-            let choose = document.getElementById("choose")
-            let value = document.getElementById("value")
-            let result = 0
+            let choose = document.getElementById("choose");
+            let value = document.getElementById("value");
+            let result = 0;
             if (choose.value == "feet") {
-                result = changeFeetToMeter(value.value)
-                document.getElementById("output").innerHTML = "Kết quả = " + result + " meters"
+                result = changeFeetToMeter(value.value);
+                document.getElementById("output").innerHTML = "Kết quả = " + result + " meters";
             } else {
-                result = changeMeterToFeet(value.value)
-                document.getElementById("output").innerHTML = "Kết quả = " + result + " feet"
+                result = changeMeterToFeet(value.value);
+                document.getElementById("output").innerHTML = "Kết quả = " + result + " feet";
             }
         }
 
         function changeFeetToMeter(feet) {
-            let meter = 0.305 * feet
+            let meter = 0.305 * feet;
             return meter
         }
 
         function changeMeterToFeet(meter) {
-            let feet = 3.279 * meter
+            let feet = 3.279 * meter;
             return feet
         }
     </script>
