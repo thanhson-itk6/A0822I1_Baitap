@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+
+<body>
+    <h2>Hàm kiểm tra số nguyên tố</h2>
+    <input type="text" id="input">
+    <input type="button" value="Kiểm tra" onclick="soNguyenTo()">
+
+    <script>
+        function isPrime(number) {
+            if (number <= 1) return false
+            else if (number == 2 || number == 3) return true
+            else if (number % 2 == 0) return false
+            else {
+                for (i = 3; i < number; i += 2) {
+                    if (number % i == 0) {
+                        return false
+                    }
+                }
+            }
+
+            return true
+        }
+
+        function soNguyenTo() {
+            let so = document.getElementById("input")
+            let kiemtra = isPrime(so.value)
+            if (kiemtra) {
+                alert(so.value + " is a prime number")
+            } else {
+                alert(so.value + " is not a prime number")
+            }
+        }
+    </script>
+</body>
+
+</html>
